@@ -1,5 +1,6 @@
 # -*- coding=utf-8 -*-
 from page.page_home import HomePageAciton
+from page.page_myself import MyselfPageAction
 
 
 class Page:
@@ -9,3 +10,6 @@ class Page:
 
     def inithomepage(self):
         return HomePageAciton(self.driver)
+
+    def initmyselfpage(self):
+        return MyselfPageAction(self.driver)
