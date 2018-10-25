@@ -1,6 +1,8 @@
 # -*- coding=utf-8 -*-
 from base import initDriver
 from page.page import Page
+import pytest
+pytestmark = pytest.mark.skip( "跳过首页测试" )
 
 
 class TestDemo:

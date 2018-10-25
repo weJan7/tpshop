@@ -1,3 +1,5 @@
+import time
+
 from base import initDriver
 from page.page import Page
 
@@ -11,12 +13,19 @@ class TestDemo:
     def test_login_nonum(self):
 
         # 使用首页模型当中的进入 首页的动作
-        self.page.inithomepage().auto_enter_home()
+        self.page.inithomepage.auto_enter_home()
+        self.page.initmyselfpage.click_myself()
+
+        time.sleep(2)  # 涉及到页面转场我们选择停留一定的时间
+
+        # 点击登录注册按钮
+        self.page.initmyselfpage.click_login_reg()
+
+        time.sleep(2)
 
         # 输入帐号
-
+        self.page.initmyselfpage.input_num("13160772173")
         # 输入密码
-
+        self.page.initmyselfpage.input_pwd("123456")
         # 点击登录
-
-        print("我想要测试帐号不存在的哪一类操作")
+        self.page.initmyselfpage.click_enter()
