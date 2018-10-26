@@ -1,5 +1,6 @@
 # -*- coding=utf-8 -*-
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 
 from base.baseaction import BaseAction
 
@@ -23,5 +24,6 @@ class MyselfPageAction(BaseAction):
 
     def click_enter(self):
         self.click(self.enter_input_feature)
+
 
 

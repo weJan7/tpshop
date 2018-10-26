@@ -29,3 +29,13 @@ class TestDemo:
         self.page.initmyselfpage.input_pwd("123456")
         # 点击登录
         self.page.initmyselfpage.click_enter()
+
+        # 测试登录点击之后的toast 获取
+        toast_neirong = self.page.initmyselfpage.get_toast_content()
+        # if toast_neirong == "账号不存在!":
+        #     # 添加断言
+        #     assert 1
+        # else:
+        #     assert 0
+
+        assert toast_neirong == "账号不存在!"
